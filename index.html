@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Static Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>Static Restaurant</header>
+    <main>
+        <ul>
+        </ul>
+    </main>
+
+    <template>
+        <!--        <article class="dishes_container">-->
+        <section class="dish">
+            <div class="dish_image">
+                <h1 class="dish_name">Russian Ringbread</h1>
+
+                <!--                        Add this div with the class if it is vegetarian-->
+                <div class="vegetarian">
+                    <p class="vegetarian_logo"><strong>VEG</strong></p>
+                </div>
+            </div>
+            <div class="course_content">
+                <p class="short_description"><i>Russisk ringbrød af Karapatisk mel</i></p>
+
+                <!--                        Add this div if it is a discount price-->
+
+
+                <!--                        -------------------------------------------------------->
+                <div class="dkk_symbol">
+                    <p class="dkk_logo"><strong>DKK</strong></p>
+                </div>
+
+                <div class="discount_symbol">
+                    <p class="discount_logo"><strong>%</strong></p>
+                </div>
+
+                <!--                        ----------------------------------------------------------->
+
+                <p class="actual_price">PRICE</p>
+
+                <p class="discount_text"><span class="previous_price"><i>Was 49 kr</i></span><br><span class="actual_price">10 kr</span></p>
+
+            </div>
+
+            <button>MORE DETAILS</button>
+        </section>
+        <!--        </article>-->
+    </template>
+
+
+    <div class="modal-background hide">
+        <div class="modal-content">
+            <h3 class="modal-name">NAME</h3>
+            <img src="" alt="" class="modal-image" />
+            <p class="modal-description">LONG DESCRIPTION</p>
+            <p class="modal-alcohol">ALCOHOL</p>
+            <h4 class="modal-price">PRICE</h4>
+
+            <div class="alergens">
+                <p class="alergens_logo"><strong>!</strong></p>
+                <p class="alergens_text">Lactose</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

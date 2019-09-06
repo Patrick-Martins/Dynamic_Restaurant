@@ -1,0 +1,338 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 20px;
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+ul {
+    display: flex;
+    flex-direction: column;
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+@media all and (min-width: 450px){
+    ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+
+
+
+
+
+button {
+    color: white;
+    background-color: rgba(512, 0, 0, 0.5);
+    height: 50px;
+    font-size: 1em;
+    border: none;
+}
+
+button:hover {
+    transition: .3s ease-in-out;
+    font-size: 1.5em;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+header {
+    font-weight: 600;
+    font-size: 2em;
+    color: darkblue;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 3em;
+    margin-top: 100px;
+    text-transform: uppercase;
+}
+
+.dish_name {
+    font-size: 1em;
+    text-transform: capitalize;
+}
+
+h1 {
+    grid-column: 1/-1;
+}
+
+h1,
+header,
+a {
+    text-transform: capitalize;
+}
+
+
+main {
+    font-family: Avenir, Roboto, Helvetica, san-serif;
+    font-size: 0.8rem;
+}
+
+.dishes_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 10px;
+}
+
+
+.dish {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+}
+
+.dish_image {
+    width: 100%;
+    min-height: 200px;
+    background-image: url("imgs/small/ringbroed-druer-sm.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: blue;
+
+    position: relative;
+}
+
+.dish_name {
+    margin: 0;
+    padding: 5px;
+    color: white;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.vegetarian {
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+
+
+    width: 40px;
+    height: 40px;
+    background-color: #3FC43F;
+    border-radius: 100%;
+    justify-content: center;
+    text-align: center;
+    margin: 5px;
+
+    display: flex;
+    align-items: center;
+}
+
+.vegetarian_logo {
+    display: inline-block;
+
+}
+
+.course_content {
+    padding: 10px;
+}
+
+.discount_symbol {
+    float: left;
+
+    color: white;
+    font-weight: bold;
+    bottom: 0;
+
+
+    width: 40px;
+    height: 40px;
+    background-color: #E4F705;
+    border-radius: 100%;
+    justify-content: center;
+    text-align: center;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.dkk_symbol {
+    float: left;
+
+    color: white;
+    font-weight: bold;
+    bottom: 0;
+
+    margin-right: 10px;
+
+}
+
+.dkk_logo {
+    display: inline-block;
+    color: black;
+}
+
+.discount_logo {
+    display: inline-block;
+    color: black;
+}
+
+.price_logo {
+    display: inline-block;
+}
+
+.previous_price {
+    color: darkgray;
+}
+
+.actual_price {
+    display: inline-block;
+}
+
+
+/*
+.alergensSymbol{
+
+    color: white;
+    font-weight: bold;
+    bottom: 0;
+
+
+    width: 30px;
+    height: 30px;
+    border:  solid black;
+    border-radius: 100%;
+    justify-content: center;
+    text-align: center;
+    margin:5px;
+}
+*/
+
+.alergens {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.alergens_logo {
+
+    order: 1;
+    color: black;
+
+    font-weight: bold;
+    bottom: 0;
+
+
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 100%;
+    justify-content: center;
+    text-align: center;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.alergens_text {
+    display:block;
+}
+
+
+
+
+
+
+
+/*
+img {
+    max-width: 100%;
+    height: auto;
+    align-self: center;
+}
+*/
+
+/*grid-column: 1/-1;
+occupies the whole columns
+*/
+
+
+.soldOut {
+    position: relative;
+}
+
+.soldOut:before,
+.soldOut:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: red;
+    border-radius: 100px;
+    top: 200px;
+    z-index: 10;
+}
+
+.soldOut:before {
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    transform: rotate(60deg);
+}
+
+.soldOut:after {
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+}
+
+
+
+
+
+
+/*MODAL -------------------------------------------------------*/
+
+.hide {
+    display: none;
+}
+
+.modal-background {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    border: 1px solid #7c1f17;
+    margin: 1em;
+    padding: 2em;
+}
+
+.modal-alcohol{
+    color: red;
+    font-size: .8em;
+}
